@@ -1,5 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/app/ui/card";
-import { Badge } from "@/app/ui/badge";
+import { Badge } from "@/ui/badge";
 import { ExternalLink } from "lucide-react";
 
 // Mock data for startups
