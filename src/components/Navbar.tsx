@@ -3,21 +3,16 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, Hexagon } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/app/ui/button";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 const navLinks = [
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
     { name: "Programs", path: "/programs" },
-    { name: "Facilities", path: "/facilities" },
     { name: "Focus Sectors", path: "/sectors" },
-    { name: "Startups", path: "/startups" },
-    { name: "News & Events", path: "/news" },
-    { name: "Team", path: "/team" },
-    { name: "Partnerships", path: "/partnerships" },
-    { name: "Resources", path: "/resources" },
 ];
 
 export function Navbar() {
@@ -25,12 +20,20 @@ export function Navbar() {
     const pathname = usePathname();
 
     return (
-        <nav className="sticky top-0 z-50 w-full border-b border-blue-100 bg-white/80 backdrop-blur-md">
+        <nav className="sticky top-0 z-50 w-full border-b border-blue-100 bg-white backdrop-blur-md">
             <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+                
+                {/* Logo */}
                 <div className="flex items-center gap-2">
                     <Link href="/" className="flex items-center gap-2 text-blue-700">
-                        <Hexagon className="h-8 w-8 fill-blue-600 text-blue-600" />
-                        <span className="text-xl font-bold tracking-tight">B-HIVE</span>
+                        <Image 
+                            src="/bhive-logo.jpeg" 
+                            alt="B-HIVE Logo" 
+                            width={120}
+                            height={64}
+                            className="h-10 w-auto object-contain"
+                            priority
+                        />
                     </Link>
                 </div>
 

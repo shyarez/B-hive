@@ -9,18 +9,52 @@ export default function Home() {
   useDocumentTitle("Home");
   return (
     <div className="flex flex-col">
+
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-white py-24 sm:py-32 lg:pb-32 xl:pb-36">
         <div className="absolute inset-0 bg-[url('https://picsum.photos/seed/workspace/1920/1080?blur=4')] bg-cover bg-center opacity-10" />
         <div className="absolute inset-0 bg-gradient-to-br from-blue-50/90 to-white/90" />
         
+         <style>{`
+          @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap');
+          .hero-body { font-family: 'DM Sans', sans-serif; }
+        `}</style>
+
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="mx-auto max-w-4xl text-5xl font-extrabold tracking-tight text-slate-900 sm:text-7xl">
-            Igniting Ideas. <span className="text-blue-600">Empowering Innovators.</span>
-          </h1>
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-600">
-            B-HIVE is the innovation and entrepreneurship hub of Birla Global University helping students, researchers and entrepreneurs turn ideas into real ventures.
-          </p>
+        
+        {/* Logo + Title lockup */}
+          <div className="mx-auto mb-6 flex flex-col items-center gap-3">
+            <img 
+              src="/bhive-logo.png" 
+              alt="B-HIVE Logo" 
+              className="w-auto object-contain"
+              style={{ height: '8rem' }}
+             />
+            <h1 
+              className="font-bold tracking-wider text-slate-900"
+              style={{ fontSize: '5rem', lineHeight: '1' }}
+             >
+             B-HIVE
+            </h1>
+          </div>
+
+        {/* Full Form */}
+         <p className="mt-4 text-4xl font-bold  text-slate-700 max-w-3xl mx-auto">
+           Birla Hub for Innovation, <br/>
+            Venturing and Entrepreneurship 
+         </p>
+        
+        {/* Tagline */}
+         <p className="hero-body mt-4 text-sm font-medium tracking-[0.2em] uppercase text-blue-600">
+           Igniting Ideas. Empowering Innovators.
+         </p>
+        
+        {/* Description */}
+         <p className="hero-body mx-auto mt-6 max-w-2xl text-base leading-relaxed text-slate-500">
+           B-HIVE is the innovation and entrepreneurship hub of Birla Global University helping students, researchers and entrepreneurs turn ideas into real ventures.
+         </p>
+
+          {/* Buttons */}
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <Link href="/apply">
               <Button size="lg" className="h-12 px-8 text-base">
