@@ -27,7 +27,7 @@ export function Navbar() {
                 <div className="flex items-center gap-2">
                     <Link href="/" className="flex items-center gap-2 text-blue-700">
                         <Image 
-                            src="/bhive-logo.jpeg" 
+                            src="/bhive-logo.png" 
                             alt="B-HIVE Logo" 
                             width={120}
                             height={64}
